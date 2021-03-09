@@ -5,17 +5,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = __importDefault(require("./classes/server"));
 const usuario_1 = __importDefault(require("./routes/usuario"));
+const post_1 = __importDefault(require("./routes/post"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
+const express_fileupload_1 = __importDefault(require("express-fileupload"));
 const server = new server_1.default();
 //configurar CORS
 server.app.use(cors_1.default({ origin: true, credentials: true }));
 //Body parser
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use(body_parser_1.default.json());
+// FileUpload
+server.app.use(express_fileupload_1.default({ useTempFiles: true }));
 //rutas de mi aplicación
 server.app.use('/user', usuario_1.default);
+server.app.use('/posts', post_1.default);
 //conectar DB
 //mongodb://user:pawword@host:port/db     generalmente host=localhost, port=27017, test db by default, user: usuario con permisos de lectura y escritura
 //con usuario administrador

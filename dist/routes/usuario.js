@@ -102,4 +102,12 @@ userRoutes.post('/update', authentication_1.verificaToken, (req, res) => {
         });
     });
 });
+//retornar información del token
+userRoutes.get('/', [authentication_1.verificaToken], (req, res) => {
+    const usuario = req.usuario;
+    res.json({
+        ok: true,
+        usuario
+    });
+});
 exports.default = userRoutes;

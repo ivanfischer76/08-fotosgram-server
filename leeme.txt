@@ -1,0 +1,9 @@
+
+Al desargar el proyecto, debemos ejecutar npm install para crear la carpeta node_modules
+
+Para no obtener errores es importante seguir estos pasos:
+
+1.- Ejecutar el comando tsc -w.
+2.- En otra consola crear una carpeta llamada uploads y dentro un archivo vacío llamado none.ts 
+    (el nombre es irrelevante, la extensión no). Esto creará una carpeta llamada dist.
+3.- Dentro de la carpeta dist copiar la carpeta assets con su contenido

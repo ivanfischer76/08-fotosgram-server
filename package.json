@@ -15,12 +15,15 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.18"
+    "mongoose": "^5.11.18",
+    "uniqid": "^5.3.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11",
-    "@types/jsonwebtoken": "^8.5.0"
+    "@types/express-fileupload": "^1.1.6",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/uniqid": "^5.3.0"
   }
 }
